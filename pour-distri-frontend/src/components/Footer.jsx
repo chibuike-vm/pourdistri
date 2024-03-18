@@ -13,35 +13,40 @@ const Wrapper = styled.footer`
     align-items: center;
     gap: 2rem;
     margin-top: 4rem;
-    background-color: rgba(0, 0, 0, 0.9);
-    color: white;
-    padding: 3rem;
+    background-image: linear-gradient(#6b7280, #030712);
+    color: #f9fafb;
     box-shadow: 0 -0.1rem 0.3rem rgb(0, 0, 0, 0.5);
 
     .footer-sub-container {
         max-width: 1500px;
+        padding: 1rem;
     }
 
     .social-links-container {
         display: flex;
         flex-direction: row;
-        font-size: 1.8rem;
+        font-size: 1.6rem;
         gap: 2rem;
+        justify-content: center;
     }
 
     h3 {
-        font-size: 1.2rem;
+        font-size: 1.05rem;
         text-align: center;
     }
 
     a {
         text-decoration: none;
-        color: white;
+        color: #f9fafb;
     }
 
     a:hover {
         text-decoration: none;
-        color: #7fdf3b;
+        color: #f43f5e;
+    }
+
+    span {
+        letter-spacing: 0.15rem;
     }
 `;
 
@@ -80,7 +85,10 @@ const Footer = () => {
                     </a>
                 </div>
                 <div>
-                    <h3>&copy; 2024, All rights reserved.</h3>
+                    <h3>
+                        &copy; 2024 <span>Pour</span>
+                        <span>Distri,</span> All Rights Reserved.
+                    </h3>
                 </div>
             </div>
         </Wrapper>

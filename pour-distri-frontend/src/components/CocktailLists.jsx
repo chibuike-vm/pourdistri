@@ -12,8 +12,7 @@ const Wrapper = styled.section`
     padding: 2rem;
 
     article {
-        box-shadow: 0 0.1rem 0.3rem;
-        border-radius: 0.2rem;
+        box-shadow: 0 0.1rem 1rem #9f1239;
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -21,6 +20,7 @@ const Wrapper = styled.section`
 
     .cocktail-description {
         padding-left: 2rem;
+        background-color: #1f2937;
     }
 
     .cocktail-description h2 {
@@ -33,12 +33,10 @@ const Wrapper = styled.section`
 
     article div button {
         margin-bottom: 2rem;
-        font-size: 1.3rem;
-        background-color: #96ea30;
-    }
-
-    .error-container {
-        margin: ;
+        font-size: 1.2rem;
+        background-color: #be123c;
+        color: #fff1f2;
+        padding: 0.3rem 0.5rem;
     }
 
     @media only screen and (width >= 768px) {
@@ -71,7 +69,7 @@ const ErrorWrapper = styled.div`
     span {
         font-size: 1.2rem;
         text-transform: capitalize;
-        color: #eb0fe8;
+        color: #93c5fd;
     }
 `;
 

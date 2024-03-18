@@ -1,14 +1,14 @@
 export const nav = [
     {
-        title: "home",
+        title: "Home",
         path: "/",
     },
     {
-        title: "about",
+        title: "About",
         path: "/about",
     },
     {
-        title: "become a distributor",
+        title: "Become a Distributor",
         path: "/apply",
     },
 ];

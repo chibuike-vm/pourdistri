@@ -3,6 +3,8 @@ import { Form } from "react-router-dom";
 import styled from "styled-components";
 
 const Wrapper = styled.article`
+    margin-top: 4.5rem;
+
     .form {
         width: 90%;
         margin: 0 auto;
@@ -14,7 +16,11 @@ const Wrapper = styled.article`
     input {
         font-size: 1rem;
         width: 100%;
-        text-transform: uppercase;
+        text-transform: capitalize;
+    }
+
+    input[type="email"] {
+        text-transform: lowercase;
     }
 
     label {
@@ -26,7 +32,8 @@ const Wrapper = styled.article`
     legend {
         font-size: 1.3rem;
         text-transform: capitalize;
-        color: #1165ed;
+        color: #fff1f2;
+        font-weight: 600;
     }
 
     fieldset:nth-of-type(1) {
@@ -36,29 +43,42 @@ const Wrapper = styled.article`
     fieldset {
         margin: 0 auto;
         margin-bottom: 1.5rem;
-        width: 80%;
+        box-shadow: 0 0 1rem #9f1239;
+        border-radius: 5px;
     }
 
     input[type="submit"] {
-        width: 80%;
         display: block;
         margin: 0 auto;
         margin-top: 2.5rem;
-        background-color: #96ea30;
+        background-color: #1f2937;
+        color: #f9fafb;
+        padding: 0.25rem;
     }
 
     input {
         margin-bottom: 1rem;
+        background-color: #fff1f2;
+        box-shadow: 0 0 1rem #9f1239;
+        padding: 0.1rem 0.5rem;
     }
 
     h1 {
-        font-size: 1.5rem;
+        font-size: 1.45rem;
     }
 
     p {
         line-height: 1.5rem;
         letter-spacing: 0.05rem;
-        font-size: 1.2rem;
+        font-size: 1.05rem;
+    }
+
+    @media only screen and (width >= 912px) {
+        margin-top: 7.3rem;
+
+        .form {
+            width: 80%;
+        }
     }
 `;
 
@@ -68,27 +88,26 @@ const ApplicationForm = ({ state }) => {
             <Form method="POST" className="form">
                 <h1>Apply to Become a Distributor</h1>
                 <p>
-                    As a distributor with CocktailConduit, you&apos;ll gain
-                    access to a wide range of premium cocktails crafted by
-                    top-tier producers. Our platform offers seamless
-                    distribution solutions, allowing you to expand your product
-                    offerings and reach a broader audience of cocktail
-                    enthusiasts.
+                    As a distributor with PourDistri, you&apos;ll gain access to
+                    a wide range of premium cocktails crafted by top-tier
+                    producers. Our platform offers seamless distribution
+                    solutions, allowing you to expand your product offerings and
+                    reach a broader audience of cocktail enthusiasts.
                 </p>
 
                 <p>
                     Your privacy is important to us. The information provided in
                     this form will be used solely for the purpose of evaluating
-                    your distributor application with CocktailConduit. We will
-                    not share your personal information with third parties
-                    without your consent.
+                    your distributor application with PourDistri. We will not
+                    share your personal information with third parties without
+                    your consent.
                 </p>
                 <p>
                     Interested in distributing premium cocktails through
-                    CocktailConduit? Please complete the form below with
-                    accurate and detailed information. All fields are required.
-                    Once you submit your application, our team will review it
-                    and follow up with you regarding the next steps.
+                    PourDistri? Please complete the form below with accurate and
+                    detailed information. All fields are required. Once you
+                    submit your application, our team will review it and follow
+                    up with you regarding the next steps.
                 </p>
                 <fieldset>
                     <legend>profile information</legend>

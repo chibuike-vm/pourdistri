@@ -1,17 +1,20 @@
 import { NavLink } from "react-router-dom";
-import { nav as navData } from "../assets/data/nav";
+import { nav as navData } from "../data/nav";
 import { useState } from "react";
 import { IoMdMenu, IoMdClose } from "react-icons/io";
 import styled from "styled-components";
 
 const Wrapper = styled.header`
-    background-color: rgba(0, 0, 0, 0.9);
+    background-image: linear-gradient(#4b5563, #030712);
     box-shadow: 0 0.1rem 0.3rem;
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 20;
 
     section {
         width: 90%;
         margin: 0 auto;
-        color: white;
         max-width: 1500px;
     }
 
@@ -24,6 +27,7 @@ const Wrapper = styled.header`
     .header-div h1 {
         font-size: 1.2rem;
         letter-spacing: 0.1rem;
+        color: #fff1f2;
     }
 
     section > div > button {
@@ -39,22 +43,18 @@ const Wrapper = styled.header`
         right: 0;
         display: flex;
         flex-direction: column;
-        background-color: #b93c3c;
+        background-image: linear-gradient(to right, #9f1239, #be123c, #e11d48);
     }
 
     .nav-bar h2 {
         letter-spacing: 0.1rem;
-        color: white;
-        text-transform: capitalize;
-        font-size: 1.6rem;
+        color: #fff1f2;
+        font-size: 1.3rem;
         padding-left: 2rem;
     }
 
     .nav-bar h2:hover {
-        color: #a1be76;
         transform: scale(1.05);
-        box-shadow: 0 0 0.4rem black;
-        border-radius: 0.4rem;
     }
 
     .nav-bar a {
@@ -62,14 +62,14 @@ const Wrapper = styled.header`
     }
 
     .links-container-div {
-        padding: 0 0.4rem;
+        padding: 0 0.5rem;
     }
 
     .active h2 {
-        background-color: rgb(255, 255, 255);
-        box-shadow: 0 0 0.4rem black;
-        color: black;
-        border-radius: 0.4rem;
+        background-color: #fff1f2;
+        box-shadow: 0 0 0.4rem #030712;
+        color: #030712;
+        border-radius: 0 0.4rem 0;
         padding: 0 0.4rem;
     }
 
@@ -80,6 +80,11 @@ const Wrapper = styled.header`
     .close-button-div {
         align-self: flex-end;
         padding: 1rem;
+        font-size: 1.3rem;
+    }
+
+    button {
+        background-color: #fff1f2;
     }
 
     @media only screen and (width >= 375px) {
@@ -119,17 +124,20 @@ const Wrapper = styled.header`
             width: 70%;
             justify-content: flex-end;
             gap: 1rem;
-            background-color: transparent;
+            background-image: none;
         }
 
         .links-container-div h2 {
             text-align: center;
-            font-size: 1.3rem;
         }
 
         .hide-menu-button,
         .close-button-div {
             display: none;
+        }
+
+        .links-container-div .active > h2 {
+            border-radius: 0 0.4rem 0;
         }
     }
 `;
@@ -141,7 +149,7 @@ const NavBar = () => {
         <Wrapper>
             <section>
                 <div className="header-div">
-                    <h1>CocktailConduit</h1>
+                    <h1>PourDistri</h1>
                     <button
                         type="button"
                         onClick={() => setIsNavbarClose(!isNavbarClose)}
