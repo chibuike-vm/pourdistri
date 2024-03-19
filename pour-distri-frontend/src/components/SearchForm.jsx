@@ -37,13 +37,12 @@ const Wrapper = styled.article`
 
     .input-div {
         display: flex;
-        background-color: green;
         justify-content: center;
         width: 90%;
         margin: 0 auto;
         font-size: 1rem;
         margin-bottom: 2rem;
-        box-shadow: 0 0 0.5rem;
+        box-shadow: 0 0 0.5rem #9f1239;
     }
 
     input[type="search"] {
