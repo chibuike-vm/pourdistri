@@ -3,6 +3,7 @@ import { useLoaderData } from "react-router";
 import LoneCocktail from "../components/LoneCocktail";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { useQuery } from "@tanstack/react-query";
 
 const Wrapper = styled.article`
     margin-top: 7.5rem;
@@ -23,14 +24,29 @@ const Wrapper = styled.article`
 const singleCocktailDBUrl =
     "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=";
 
-export const loader = async ({ params }) => {
-    const response = await axios(`${singleCocktailDBUrl}${params.id}`);
-    return response;
+const searchSingleCocktail = (id) => {
+    return {
+        queryKey: ["searchSingleCocktail", id],
+        queryFn: async () => {
+            const response = await axios(`${singleCocktailDBUrl}${id}`);
+            return response.data.drinks;
+        },
+    };
 };
 
+export const loader =
+    (queryClient) =>
+    async ({ params }) => {
+        const id = params.id;
+        await queryClient.ensureQueryData(searchSingleCocktail(id));
+        return id;
+    };
+
 const SingleCocktail = () => {
-    const response = useLoaderData();
-    const { drinks } = response.data;
+    const id = useLoaderData();
+
+    const response = useQuery(searchSingleCocktail(id));
+    const { data: drinks } = response;
 
     const getIngedients = (() => {
         let strIngredients = "";
