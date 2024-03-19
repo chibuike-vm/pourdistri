@@ -11,13 +11,17 @@ const Wrapper = styled.div`
     }
 
     span {
-        color: red;
+        color: #ffe4e6;
         text-transform: uppercase;
         letter-spacing: 0.05rem;
     }
 
     p {
         font-size: 1.3rem;
+    }
+
+    @media only screen and (width >= 912px) {
+        margin-top: 10rem;
     }
 `;
 

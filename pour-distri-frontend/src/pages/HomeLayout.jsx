@@ -31,12 +31,20 @@ const Wrapper = styled.section`
     .loading-animation div {
         height: 100px;
         width: 100px;
-        background-color: blue;
-        color: white;
+        background-color: #1f2937;
+        background-image: linear-gradient(
+            to right,
+            #9ca3af,
+            #6b7280,
+            #4b5563,
+            #030712
+        );
+        color: #f9fafb;
         border-radius: 50px;
         text-align: center;
         transition-property: transform 3s;
-        margin-bottom: 25rem;
+        margin-top: 5rem;
+        margin-bottom: 100%;
     }
 
     .start-loading-animation div {
@@ -88,7 +96,7 @@ const HomeLayout = () => {
                     }`}
                 >
                     <div>
-                        <p className="load-info">wait</p>
+                        <p className="load-info">Wait</p>
                     </div>
                 </article>
             ) : (

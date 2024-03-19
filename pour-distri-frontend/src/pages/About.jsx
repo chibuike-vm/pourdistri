@@ -1,22 +1,24 @@
-import { about as aboutData } from "../assets/data/about";
+import { about as aboutData } from "../data/about";
 import styled from "styled-components";
 
 const Wrapper = styled.section`
     width: 90%;
     margin: 0 auto;
+    margin-top: 4.5rem;
     padding: 0.8rem;
 
     article {
         line-height: 1.5rem;
         letter-spacing: 0.1rem;
+        margin-bottom: 3rem;
     }
 
     article h1 {
-        font-size: 1.6rem;
+        font-size: 1.45rem;
     }
 
     article h2 {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
     }
 
     article p span {
@@ -24,11 +26,15 @@ const Wrapper = styled.section`
     }
 
     ul {
-        padding-left: 0;
+        padding-left: 20px;
     }
 
     p {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
+    }
+
+    @media only screen and (width >= 912px) {
+        margin-top: 7.3rem;
     }
 `;
 

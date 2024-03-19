@@ -24,8 +24,9 @@ const Wrapper = styled.section`
         text-decoration: none;
         text-transform: capitalize;
         font-size: 1.2rem;
-        letter-spacing: 0.1rem;
+        letter-spacing: 0.05rem;
         font-weight: 700;
+        color: #93c5fd;
     }
 
     h2 {
@@ -34,9 +35,13 @@ const Wrapper = styled.section`
     }
 
     span {
-        color: red;
+        color: #ffe4e6;
         text-transform: uppercase;
         letter-spacing: 0.05rem;
+    }
+
+    @media only screen and (width >= 912px) {
+        margin-top: 10rem;
     }
 `;
 
@@ -53,7 +58,7 @@ const GlobalErrorPage = () => {
                         width={300}
                     />
                     <p>
-                        Resource not found! Please, kind go back to the{" "}
+                        Resource not found! Kindly go back to the{" "}
                         <Link to="/" className="back-home-link">
                             home page
                         </Link>

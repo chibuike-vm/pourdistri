@@ -5,12 +5,18 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Wrapper = styled.article`
-    margin-top: 5rem;
+    margin-top: 7.5rem;
     text-align: center;
     font-size: 1.3rem;
 
     button {
-        background-color: #96ea30;
+        background-color: #1f2937;
+        color: #f9fafb;
+        padding: 0.25rem;
+    }
+
+    @media only screen and (width >= 768px) {
+        margin-top: 9.5rem;
     }
 `;
 

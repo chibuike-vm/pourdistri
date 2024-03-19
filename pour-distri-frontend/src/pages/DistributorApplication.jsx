@@ -12,11 +12,22 @@ export const action = async ({ request }) => {
             applicantsData
         );
         toast.success(
-            `Your application was ${response.data.applicantStatus.toUpperCase()}! You will be contacted via email if you qualify.`
+            <p>
+                Your application was{" "}
+                {response.data.applicantStatus.toUpperCase()}!<br />
+                <br />
+                You will be contacted via email if you&apos;re considered.
+            </p>
         );
         return redirect("/");
     } catch (error) {
-        toast.error("Your application was UNSUCCESSFUL! Please, try again.");
+        toast.error(
+            <p>
+                Your application was UNSUCCESSFUL! <br />
+                <br />
+                Please, try again.
+            </p>
+        );
         return error;
     }
 };
