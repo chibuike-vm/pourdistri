@@ -6,7 +6,7 @@ const Wrapper = styled.article`
     text-align: center;
     width: 90%;
     margin: 0 auto;
-    margin-top: 6rem;
+    margin-top: 5.5rem;
 
     .intro-text {
         font-size: 1.1rem;
@@ -88,7 +88,7 @@ const Wrapper = styled.article`
     }
 
     @media only screen and (width >= 912px) {
-        margin-top: 8.5rem;
+        margin-top: 7.5rem;
     }
 `;
 
