@@ -6,7 +6,7 @@ const Wrapper = styled.article`
     text-align: center;
     width: 90%;
     margin: 0 auto;
-    margin-top: 5.5rem;
+    margin-top: 4.8rem;
 
     .intro-text {
         font-size: 1.1rem;
@@ -23,10 +23,11 @@ const Wrapper = styled.article`
         padding: 1rem;
         border-radius: 0 1rem 1.5rem;
         box-shadow: 0 0 2rem #be123c;
+        margin-bottom: 0;
     }
 
     h3 {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
     }
 
     form {
@@ -47,14 +48,14 @@ const Wrapper = styled.article`
 
     input[type="search"] {
         width: 60%;
-        padding: 0.25rem;
+        padding: 0.1rem;
     }
 
     input[type="submit"] {
         width: 40%;
         background-color: #1f2937;
         color: #f9fafb;
-        padding: 0.25rem;
+        padding: 0.1rem;
     }
 
     .logo-title {
@@ -87,7 +88,7 @@ const Wrapper = styled.article`
     }
 
     @media only screen and (width >= 912px) {
-        margin-top: 7.5rem;
+        margin-top: 6.8rem;
     }
 `;
 
