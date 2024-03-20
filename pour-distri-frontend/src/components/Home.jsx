@@ -7,7 +7,7 @@ const Wrapper = styled.article`
     text-align: center;
     width: 90%;
     margin: 0 auto;
-    margin-top: 4.3rem;
+    margin-top: 4.1rem;
 
     .intro-text {
         font-size: 1.1rem;
@@ -15,10 +15,6 @@ const Wrapper = styled.article`
         letter-spacing: 0.1rem;
         line-height: 1.2rem;
         padding: 0.5rem;
-    }
-
-    p {
-        color: #4c0519;
     }
 
     h1 {
@@ -64,7 +60,7 @@ const Wrapper = styled.article`
     }
 
     @media only screen and (width >= 912px) {
-        margin-top: 6.3rem;
+        margin-top: 6.1rem;
     }
 `;
 

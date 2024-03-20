@@ -4,7 +4,7 @@ import styled from "styled-components";
 import deliveryTruckSvg from "../assets/images/delivery-truck.svg";
 
 const Wrapper = styled.article`
-    margin-top: 3.8rem;
+    margin-top: 3.5rem;
 
     .form {
         width: 90%;
@@ -88,7 +88,7 @@ const Wrapper = styled.article`
     }
 
     @media only screen and (width >= 912px) {
-        margin-top: 6.3rem;
+        margin-top: 6rem;
 
         .form {
             width: 80%;
