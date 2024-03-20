@@ -3,6 +3,7 @@ import axios from "axios";
 import SearchForm from "../components/SearchForm";
 import CocktailLists from "../components/CocktailLists";
 import { useQuery } from "@tanstack/react-query";
+import Home from "../components/Home";
 
 const cocktailDBSearchUrl =
     "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=";
@@ -36,6 +37,7 @@ const Landing = () => {
 
     return (
         <section>
+            <Home />
             <SearchForm searchItem={searchItem} />
             <CocktailLists drinks={drinks} />
         </section>

@@ -26,7 +26,7 @@ const Wrapper = styled.section`
         font-size: 1.2rem;
         letter-spacing: 0.05rem;
         font-weight: 700;
-        color: #93c5fd;
+        color: #6c63ff;
     }
 
     h2 {
@@ -35,7 +35,7 @@ const Wrapper = styled.section`
     }
 
     span {
-        color: #ffe4e6;
+        color: #f43f5e;
         text-transform: uppercase;
         letter-spacing: 0.05rem;
     }

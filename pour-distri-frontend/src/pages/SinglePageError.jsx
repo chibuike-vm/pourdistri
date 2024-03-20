@@ -11,7 +11,7 @@ const Wrapper = styled.div`
     }
 
     span {
-        color: #ffe4e6;
+        color: #f43f5e;
         text-transform: uppercase;
         letter-spacing: 0.05rem;
     }

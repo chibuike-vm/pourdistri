@@ -4,7 +4,7 @@ import styled from "styled-components";
 const Wrapper = styled.section`
     width: 90%;
     margin: 0 auto;
-    margin-top: 4.5rem;
+    margin-top: 3.3rem;
     padding: 0.8rem;
 
     article {
@@ -34,7 +34,7 @@ const Wrapper = styled.section`
     }
 
     @media only screen and (width >= 912px) {
-        margin-top: 7.3rem;
+        margin-top: 5.8rem;
     }
 `;
 

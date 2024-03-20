@@ -4,6 +4,7 @@ import LoneCocktail from "../components/LoneCocktail";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { useQuery } from "@tanstack/react-query";
+import happyClientsSvg from "../assets/images/happy-clients.svg";
 
 const Wrapper = styled.article`
     margin-top: 7.5rem;
@@ -16,8 +17,19 @@ const Wrapper = styled.article`
         padding: 0.25rem;
     }
 
+    img {
+        display: block;
+        margin: 0 auto;
+        height: 15rem;
+        width: 90%;
+    }
+
     @media only screen and (width >= 768px) {
         margin-top: 9.5rem;
+
+        img {
+            height: 17rem;
+        }
     }
 `;
 
@@ -67,6 +79,7 @@ const SingleCocktail = () => {
                 <Link to="/" className="back-home-link">
                     <button type="button">Back to Home</button>
                 </Link>
+                <img src={happyClientsSvg} alt="Happy Users Image" />
             </Wrapper>
             <LoneCocktail data={drinks[0]} getIngedients={getIngedients} />
         </>
