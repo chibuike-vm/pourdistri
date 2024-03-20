@@ -25,7 +25,7 @@ const Wrapper = styled.footer`
     .social-links-container {
         display: flex;
         flex-direction: row;
-        font-size: 1.3rem;
+        font-size: 1.4rem;
         gap: 2rem;
         justify-content: center;
     }

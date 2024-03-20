@@ -47,6 +47,7 @@ const Wrapper = styled.section`
 
     span {
         color: #fff1f2;
+        font-size: 1.15rem;
     }
 
     @media only screen and (width >= 850px) {

@@ -9,6 +9,8 @@ const Wrapper = styled.article`
 
     h3 {
         font-size: 1.3rem;
+        letter-spacing: 0.05rem;
+        line-height: 1.5rem;
     }
 
     form {
@@ -39,11 +41,7 @@ const Wrapper = styled.article`
         padding: 0.1rem;
     }
 
-    @media only screen and (width >= 375px) {
-        h3 {
-            font-size: 1.3rem;
-        }
-
+    @media only screen and (width > 280px) {
         .input-div {
             font-size: 1.2rem;
         }
@@ -55,8 +53,7 @@ const SearchForm = ({ searchItem }) => {
         <Wrapper>
             <Form className="form">
                 <h3>
-                    Kindly, use the search button to explore our cocktail
-                    inventory.
+                    Kindly use the search box to explore our cocktail inventory.
                 </h3>
                 <div className="input-div">
                     <input

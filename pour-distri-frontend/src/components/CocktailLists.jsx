@@ -70,7 +70,7 @@ const ErrorWrapper = styled.div`
     span {
         font-size: 1.2rem;
         text-transform: capitalize;
-        color: #93c5fd;
+        color: #6c63ff;
     }
 `;
 

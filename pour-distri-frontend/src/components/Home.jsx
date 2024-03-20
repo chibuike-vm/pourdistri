@@ -7,13 +7,13 @@ const Wrapper = styled.article`
     text-align: center;
     width: 90%;
     margin: 0 auto;
-    margin-top: 4.1rem;
+    margin-top: 3.56rem;
 
-    .intro-text {
+    p {
         font-size: 1.1rem;
         text-align: left;
         letter-spacing: 0.1rem;
-        line-height: 1.2rem;
+        line-height: 1.5rem;
         padding: 0.5rem;
     }
 
@@ -39,7 +39,9 @@ const Wrapper = styled.article`
         width: 90%;
     }
 
-    @media only screen and (width >= 375px) {
+    @media only screen and (width > 280px) {
+        margin-top: 4.1rem;
+
         h1 {
             font-size: 2rem;
         }
@@ -71,7 +73,7 @@ const Home = () => {
                 Welcome to <span className="logo-title">PourDistri</span>
             </h1>
             <img src={heroSvg} alt="Hero Image" />
-            <p className="intro-text">
+            <p>
                 Discover the perfect blend of convenience and excellence with
                 PourDistri, your premier destination for sourcing and
                 distributing the finest cocktails worldwide. At PourDistri,

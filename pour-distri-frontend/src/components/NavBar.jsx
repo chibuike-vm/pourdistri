@@ -25,13 +25,13 @@ const Wrapper = styled.header`
     }
 
     .header-div h1 {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
         letter-spacing: 0.1rem;
         color: #fff1f2;
     }
 
     section > div > button {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
     }
 
     .nav-bar {
@@ -87,7 +87,7 @@ const Wrapper = styled.header`
         font-size: 1.3rem;
     }
 
-    @media only screen and (width >= 375px) {
+    @media only screen and (width > 280px) {
         .header-div h1 {
             font-size: 1.5rem;
             letter-spacing: 0.2rem;
