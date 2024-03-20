@@ -80,11 +80,11 @@ const Wrapper = styled.header`
     .close-button-div {
         align-self: flex-end;
         padding: 1rem;
-        font-size: 1.3rem;
     }
 
     button {
         background-color: #fff1f2;
+        font-size: 1.3rem;
     }
 
     @media only screen and (width >= 375px) {
