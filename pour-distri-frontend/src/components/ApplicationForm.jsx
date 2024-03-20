@@ -1,9 +1,10 @@
 /* eslint-disable react/prop-types */
 import { Form } from "react-router-dom";
 import styled from "styled-components";
+import deliveryTruckSvg from "../assets/images/delivery-truck.svg";
 
 const Wrapper = styled.article`
-    margin-top: 4.5rem;
+    margin-top: 3.8rem;
 
     .form {
         width: 90%;
@@ -32,7 +33,6 @@ const Wrapper = styled.article`
     legend {
         font-size: 1.3rem;
         text-transform: capitalize;
-        color: #fff1f2;
         font-weight: 600;
     }
 
@@ -43,7 +43,7 @@ const Wrapper = styled.article`
     fieldset {
         margin: 0 auto;
         margin-bottom: 1.5rem;
-        box-shadow: 0 0 1rem #9f1239;
+        box-shadow: 0 0 1rem #d1d5db;
         border-radius: 5px;
     }
 
@@ -59,7 +59,7 @@ const Wrapper = styled.article`
     input {
         margin-bottom: 1rem;
         background-color: #fff1f2;
-        box-shadow: 0 0 1rem #9f1239;
+        box-shadow: 0 0 1rem #d1d5db;
         padding: 0.1rem 0.5rem;
     }
 
@@ -73,11 +73,29 @@ const Wrapper = styled.article`
         font-size: 1.05rem;
     }
 
+    img {
+        display: block;
+        margin: 0 auto;
+        height: 15rem;
+        width: 80%;
+    }
+
+    @media only screen and (width >= 768px) {
+        img {
+            height: 17rem;
+            width: 60%;
+        }
+    }
+
     @media only screen and (width >= 912px) {
-        margin-top: 7.3rem;
+        margin-top: 6.3rem;
 
         .form {
             width: 80%;
+        }
+
+        img {
+            width: 50%;
         }
     }
 `;
@@ -109,6 +127,9 @@ const ApplicationForm = ({ state }) => {
                     submit your application, our team will review it and follow
                     up with you regarding the next steps.
                 </p>
+
+                <img src={deliveryTruckSvg} alt="Delivery Truck Image" />
+
                 <fieldset>
                     <legend>profile information</legend>
                     <label htmlFor="first-name">first name</label>

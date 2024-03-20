@@ -12,7 +12,7 @@ const Wrapper = styled.section`
     padding: 2rem;
 
     article {
-        box-shadow: 0 0.1rem 1rem #9f1239;
+        box-shadow: 0 0.1rem 1rem #d1d5db;
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -21,6 +21,7 @@ const Wrapper = styled.section`
     .cocktail-description {
         padding-left: 2rem;
         background-color: #1f2937;
+        color: #f9fafb;
     }
 
     .cocktail-description h2 {

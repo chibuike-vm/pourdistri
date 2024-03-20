@@ -13,7 +13,7 @@ const Wrapper = styled.footer`
     align-items: center;
     gap: 2rem;
     margin-top: 4rem;
-    background-image: linear-gradient(#6b7280, #030712);
+    background-image: linear-gradient(#030712, #6b7280);
     color: #f9fafb;
     box-shadow: 0 -0.1rem 0.3rem rgb(0, 0, 0, 0.5);
 
@@ -25,7 +25,7 @@ const Wrapper = styled.footer`
     .social-links-container {
         display: flex;
         flex-direction: row;
-        font-size: 1.6rem;
+        font-size: 1.3rem;
         gap: 2rem;
         justify-content: center;
     }
