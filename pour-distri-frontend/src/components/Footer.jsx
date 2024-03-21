@@ -20,6 +20,7 @@ const Wrapper = styled.footer`
     .footer-sub-container {
         max-width: 1500px;
         padding: 1rem;
+        padding-top: 2rem;
     }
 
     .social-links-container {
