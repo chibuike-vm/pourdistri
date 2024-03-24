@@ -50,19 +50,32 @@ const Wrapper = styled.section`
         font-size: 1.15rem;
     }
 
-    @media only screen and (width >= 850px) {
+    @media only screen and (width > 767px) {
+        width: 70%;
+
+        div {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        article img {
+            width: 90%;
+            height: 100%;
+        }
+
+        div article:nth-child(2) {
+            width: 90%;
+        }
+    }
+
+    @media only screen and (width > 849px) {
         div {
             display: flex;
-            align-items: center;
             gap: 1rem;
         }
 
         div article:nth-child(2) {
-            align-self: stretch;
-        }
-
-        h2 {
-            margin-bottom: 2rem;
+            width: 80%;
         }
     }
 `;
@@ -88,7 +101,7 @@ const LoneCocktail = ({ data, getIngedients }) => {
                     <img
                         src={strDrinkThumb}
                         alt={strGlass}
-                        height={300}
+                        height={400}
                         width={400}
                     />
                 </article>

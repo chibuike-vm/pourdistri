@@ -74,7 +74,7 @@ const SingleCocktail = () => {
     })();
 
     return (
-        <>
+        <section style={{ marginBottpm: "100%" }}>
             <Wrapper>
                 <Link to="/" className="back-home-link">
                     <button type="button">Back to Home</button>
@@ -82,7 +82,7 @@ const SingleCocktail = () => {
                 <img src={happyClientsSvg} alt="Happy Users Image" />
             </Wrapper>
             <LoneCocktail data={drinks[0]} getIngedients={getIngedients} />
-        </>
+        </section>
     );
 };
 export default SingleCocktail;
