@@ -14,7 +14,7 @@ const Wrapper = styled.section`
     }
 
     article h1 {
-        font-size: 1.45rem;
+        font-size: 1.35rem;
     }
 
     article h2 {

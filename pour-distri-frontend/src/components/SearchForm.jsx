@@ -26,19 +26,24 @@ const Wrapper = styled.article`
         margin: 0 auto;
         font-size: 1rem;
         margin-bottom: 2rem;
-        box-shadow: 0 0 0.5rem#d1d5db;
     }
 
     input[type="search"] {
         width: 60%;
         padding: 0.1rem;
+        border-top-left-radius: 7px;
+        border-bottom-left-radius: 7px;
+        box-shadow: 0 0 0.5rem#d1d5db;
     }
 
     input[type="submit"] {
-        width: 40%;
+        width: 30%;
         background-color: #1f2937;
         color: #f9fafb;
         padding: 0.1rem;
+        border-top-right-radius: 7px;
+        border-bottom-right-radius: 7px;
+        box-shadow: 0 0 0.5rem#d1d5db;
     }
 
     @media only screen and (width > 280px) {

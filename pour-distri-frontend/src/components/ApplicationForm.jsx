@@ -18,6 +18,7 @@ const Wrapper = styled.article`
         font-size: 1rem;
         width: 100%;
         text-transform: capitalize;
+        border-radius: 5px;
     }
 
     input[type="email"] {
@@ -28,6 +29,7 @@ const Wrapper = styled.article`
         display: block;
         margin-top: 1.5rem;
         margin-bottom: 0.2rem;
+        font-weight: 700;
     }
 
     legend {
@@ -44,7 +46,7 @@ const Wrapper = styled.article`
         margin: 0 auto;
         margin-bottom: 1.5rem;
         box-shadow: 0 0 1rem #d1d5db;
-        border-radius: 5px;
+        border-radius: 10px;
     }
 
     input[type="submit"] {
@@ -54,17 +56,18 @@ const Wrapper = styled.article`
         background-color: #1f2937;
         color: #f9fafb;
         padding: 0.25rem;
+        border-radius: 10px;
     }
 
     input {
         margin-bottom: 1rem;
         background-color: #fff1f2;
         box-shadow: 0 0 1rem #d1d5db;
-        padding: 0.1rem 0.5rem;
+        padding: 0.1rem 0.4rem;
     }
 
     h1 {
-        font-size: 1.45rem;
+        font-size: 1.35rem;
     }
 
     p {
@@ -83,7 +86,20 @@ const Wrapper = styled.article`
     @media only screen and (width >= 768px) {
         img {
             height: 17rem;
+            width: 100%;
+        }
+
+        .formAndSvgContainer {
+            display: flex;
+            align-items: center;
+        }
+
+        section article {
             width: 60%;
+        }
+
+        section article:nth-of-type(1) {
+            width: 40%;
         }
     }
 
@@ -128,71 +144,89 @@ const ApplicationForm = ({ state }) => {
                     up with you regarding the next steps.
                 </p>
 
-                <img src={deliveryTruckSvg} alt="Delivery Truck Image" />
+                <section className="formAndSvgContainer">
+                    <article>
+                        <img
+                            src={deliveryTruckSvg}
+                            alt="Delivery Truck Image"
+                        />
+                    </article>
 
-                <fieldset>
-                    <legend>profile information</legend>
-                    <label htmlFor="first-name">first name</label>
-                    <input
-                        type="text"
-                        name="first-name"
-                        id="first-name"
-                        required
-                    />
-                    <br />
+                    <article>
+                        <fieldset>
+                            <legend>profile information</legend>
+                            <label htmlFor="first-name">first name</label>
+                            <input
+                                type="text"
+                                name="first-name"
+                                id="first-name"
+                                required
+                            />
+                            <br />
 
-                    <label htmlFor="last-name">last name</label>
-                    <input
-                        type="text"
-                        name="last-name"
-                        id="last-name"
-                        required
-                    />
-                    <br />
+                            <label htmlFor="last-name">last name</label>
+                            <input
+                                type="text"
+                                name="last-name"
+                                id="last-name"
+                                required
+                            />
+                            <br />
 
-                    <label htmlFor="age">age</label>
-                    <input type="number" name="age" id="age" required />
-                    <br />
+                            <label htmlFor="age">age</label>
+                            <input type="number" name="age" id="age" required />
+                            <br />
 
-                    <label htmlFor="email">email</label>
-                    <input type="email" name="email" id="email" required />
-                    <br />
+                            <label htmlFor="email">email</label>
+                            <input
+                                type="email"
+                                name="email"
+                                id="email"
+                                required
+                            />
+                            <br />
 
-                    <label htmlFor="country-of-origin">country of origin</label>
-                    <input
-                        type="text"
-                        name="country-of-origin"
-                        id="country-of-origin"
-                        required
-                    />
-                    <br />
-                </fieldset>
+                            <label htmlFor="country-of-origin">
+                                country of origin
+                            </label>
+                            <input
+                                type="text"
+                                name="country-of-origin"
+                                id="country-of-origin"
+                                required
+                            />
+                            <br />
+                        </fieldset>
+                        <fieldset>
+                            <legend>business information</legend>
+                            <label htmlFor="years-in-business">
+                                Years In Business
+                            </label>
+                            <input
+                                type="number"
+                                name="years-in-business"
+                                id="years-in-business"
+                                required
+                            />
+                            <br />
 
-                <fieldset>
-                    <legend>business information</legend>
-                    <label htmlFor="years-in-business">Years In Business</label>
-                    <input
-                        type="number"
-                        name="years-in-business"
-                        id="years-in-business"
-                        required
-                    />
-                    <br />
-
-                    <label htmlFor="distribution-area">distribution area</label>
-                    <input
-                        type="text"
-                        name="distribution-area"
-                        id="distribution-area"
-                        required
-                    />
-                    <br />
-                </fieldset>
-
-                <input
-                    type="submit"
-                    value={state === "idle" ? "Submit" : "Submitting"}
-                />
+                            <label htmlFor="distribution-area">
+                                distribution area
+                            </label>
+                            <input
+                                type="text"
+                                name="distribution-area"
+                                id="distribution-area"
+                                required
+                            />
+                            <br />
+                        </fieldset>
+                        <input
+                            type="submit"
+                            value={state === "idle" ? "Submit" : "Submitting"}
+                        />
+                    </article>
+                </section>
             </Form>
         </Wrapper>
     );
