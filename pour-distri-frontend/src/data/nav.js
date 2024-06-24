@@ -8,7 +8,7 @@ export const nav = [
         path: "/about",
     },
     {
-        title: "Become a Distributor",
+        title: "Apply",
         path: "/apply",
     },
 ];

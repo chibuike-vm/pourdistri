@@ -12,13 +12,13 @@ const Wrapper = styled.footer`
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    margin-top: 4rem;
-    background-image: linear-gradient(#030712, #6b7280);
+    margin-top: 2rem;
+    background-image: linear-gradient(to right, #030712, #6b7280);
     color: #f9fafb;
-    box-shadow: 0 -0.1rem 0.3rem rgb(0, 0, 0, 0.5);
+    box-shadow: 0 0 0.1rem rgb(0, 0, 0, 0.5);
 
     .footer-sub-container {
-        max-width: 1500px;
+        max-width: 1200px;
         padding: 1rem;
         padding-top: 2rem;
     }
@@ -26,14 +26,15 @@ const Wrapper = styled.footer`
     .social-links-container {
         display: flex;
         flex-direction: row;
-        font-size: 1.4rem;
+        font-size: 1.3rem;
         gap: 2rem;
         justify-content: center;
     }
 
     h3 {
-        font-size: 1.05rem;
+        font-size: 0.9rem;
         text-align: center;
+        font-weight: 600;
     }
 
     a {
@@ -47,7 +48,7 @@ const Wrapper = styled.footer`
     }
 
     span {
-        letter-spacing: 0.15rem;
+        letter-spacing: 0.1rem;
     }
 `;
 

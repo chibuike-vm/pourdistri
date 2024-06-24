@@ -2,22 +2,21 @@ import { useRouteError } from "react-router";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
-    width: 90%;
+    width: 100%;
     margin: 6rem auto;
-    text-align: center;
+    padding: 0.5rem;
 
     h2 {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     span {
         color: #f43f5e;
         text-transform: uppercase;
-        letter-spacing: 0.05rem;
     }
 
     p {
-        font-size: 1.3rem;
+        font-size: 1rem;
     }
 
     @media only screen and (width >= 912px) {

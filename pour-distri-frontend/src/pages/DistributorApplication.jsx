@@ -16,7 +16,7 @@ export const action = async ({ request }) => {
         );
         return redirect("/");
     } catch (error) {
-        toast.error(`Your application was UNSUCCESSFUL! Kindly, try again.`);
+        toast.error(`Sorry, applications have been closed.`);
         return error;
     }
 };

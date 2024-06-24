@@ -1,18 +1,22 @@
 /* eslint-disable react/prop-types */
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Wrapper = styled.section`
     box-shadow: 0 0.1rem 0.3rem;
-    border-radius: 0.2rem;
-    width: 90%;
-    margin: 6rem auto;
-    padding: 0.8rem;
-    background-color: #f3f4f6;
+    border-radius: 0.4rem;
+    width: 100%;
+    margin: 4.5rem auto;
+    padding: 0.5rem;
+    background-color: rgb(243, 244, 246);
     color: #030712;
 
     article:nth-child(1) {
         text-align: center;
-        letter-spacing: 0.2rem;
+        letter-spacing: 0.1rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
     }
 
     div article:nth-child(2) {
@@ -37,34 +41,39 @@ const Wrapper = styled.section`
 
     h1 {
         margin: 2rem 0;
-        font-size: 1.5rem;
+        font-size: 1.25rem;
     }
 
     h2 {
         color: #fb7185;
-        font-size: 1.2rem;
+        font-size: 1rem;
+    }
+
+    button {
+        padding: 0.4rem 0.5rem;
+        background-color: #9f1239;
+        color: white;
+        border-radius: 0.4rem;
     }
 
     span {
         color: #fff1f2;
-        font-size: 1.15rem;
+        font-size: 1rem;
     }
 
     @media only screen and (width > 767px) {
-        width: 70%;
-
         div {
-            width: 80%;
+            width: 100%;
             margin: 0 auto;
         }
 
         article img {
-            width: 90%;
+            width: 100%;
             height: 100%;
         }
 
         div article:nth-child(2) {
-            width: 90%;
+            width: 100%;
         }
     }
 
@@ -72,10 +81,6 @@ const Wrapper = styled.section`
         div {
             display: flex;
             gap: 1rem;
-        }
-
-        div article:nth-child(2) {
-            width: 80%;
         }
     }
 `;
@@ -94,8 +99,10 @@ const LoneCocktail = ({ data, getIngedients }) => {
         <Wrapper>
             <article>
                 <h1>{strDrink}</h1>
+                <Link to="/" className="back-home-link">
+                    <button type="button">Back to Home</button>
+                </Link>
             </article>
-
             <div>
                 <article>
                     <img

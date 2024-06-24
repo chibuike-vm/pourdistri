@@ -3,9 +3,9 @@ import status404Img from "../assets/images/page_not_found.svg";
 import styled from "styled-components";
 
 const Wrapper = styled.section`
-    width: 90%;
+    width: 100%;
     margin: 6rem auto;
-    text-align: center;
+    padding: 0.5rem;
 
     div {
         width: 100%;
@@ -17,27 +17,23 @@ const Wrapper = styled.section`
     }
 
     p {
-        font-size: 1.3rem;
+        font-size: 1rem;
     }
 
     .back-home-link {
         text-decoration: none;
         text-transform: capitalize;
-        font-size: 1.2rem;
-        letter-spacing: 0.05rem;
         font-weight: 700;
-        color: #6c63ff;
+        color: #1e40af;
     }
 
     h2 {
-        font-size: 1.2rem;
-        text-align: center;
+        font-size: 1rem;
     }
 
     span {
         color: #f43f5e;
         text-transform: uppercase;
-        letter-spacing: 0.05rem;
     }
 
     @media only screen and (width >= 912px) {

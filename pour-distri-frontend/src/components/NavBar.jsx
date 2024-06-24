@@ -5,17 +5,17 @@ import { IoMdMenu, IoMdClose } from "react-icons/io";
 import styled from "styled-components";
 
 const Wrapper = styled.header`
-    background-image: linear-gradient(#4b5563, #030712);
-    box-shadow: 0 0.1rem 0.3rem;
+    background-image: linear-gradient(to right, #4b5563, #030712);
     position: fixed;
     right: 0;
     left: 0;
     z-index: 20;
+    padding: 0 0.5rem;
 
     section {
-        width: 90%;
+        width: 100%;
         margin: 0 auto;
-        max-width: 1500px;
+        max-width: 1200px;
     }
 
     .header-div {
@@ -25,13 +25,9 @@ const Wrapper = styled.header`
     }
 
     .header-div h1 {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         letter-spacing: 0.1rem;
         color: #fff1f2;
-    }
-
-    section > div > button {
-        font-size: 1.2rem;
     }
 
     .nav-bar {
@@ -43,13 +39,13 @@ const Wrapper = styled.header`
         right: 0;
         display: flex;
         flex-direction: column;
-        background-image: linear-gradient(to right, #9f1239, #be123c, #e11d48);
+        background-image: linear-gradient(to right, #737373, #525252, #262626);
     }
 
     .nav-bar h2 {
         letter-spacing: 0.1rem;
         color: #fff1f2;
-        font-size: 1.3rem;
+        font-size: 1.15rem;
         padding-left: 2rem;
     }
 
@@ -70,7 +66,7 @@ const Wrapper = styled.header`
         box-shadow: 0 0 0.4rem #030712;
         color: #030712;
         border-radius: 0 0.4rem 0;
-        padding: 0 0.4rem;
+        padding: 0.15rem 0.5rem;
     }
 
     .toggle-nav-bar {
@@ -80,21 +76,31 @@ const Wrapper = styled.header`
     .close-button-div {
         align-self: flex-end;
         padding: 1rem;
+        color: white;
     }
 
     button {
-        background-color: #fff1f2;
-        font-size: 1.3rem;
+        background-color: transparent;
+        border: 0;
+        font-size: 1.2rem;
+        padding: 0;
+    }
+
+    .hamburger-button {
+        color: white;
+        font-size: 1.7rem;
+    }
+
+    .close-button {
+        font-size: 1.7rem;
+        color: white;
     }
 
     @media only screen and (width > 280px) {
         .header-div h1 {
-            font-size: 1.5rem;
-            letter-spacing: 0.2rem;
-        }
-
-        section > div > button {
-            font-size: 1.3rem;
+            font-size: 1.25rem;
+            margin: 0;
+            padding: 0.75rem 0;
         }
     }
 
@@ -105,23 +111,22 @@ const Wrapper = styled.header`
             align-items: center;
             justify-content: space-between;
             width: 100%;
-            padding: 1rem;
         }
 
         .header-div {
-            width: 30%;
+            width: 20%;
         }
 
         .header-div h1 {
             width: 100%;
-            letter-spacing: 0.2rem;
+            padding: 0.5rem 0;
         }
 
         .nav-bar {
             position: static;
             display: flex;
             flex-direction: row;
-            width: 70%;
+            width: 80%;
             justify-content: flex-end;
             gap: 1rem;
             background-image: none;
@@ -155,7 +160,7 @@ const NavBar = () => {
                         onClick={() => setIsNavbarClose(!isNavbarClose)}
                         className="hide-menu-button"
                     >
-                        <IoMdMenu />
+                        <IoMdMenu className="hamburger-button" />
                     </button>
                 </div>
                 <nav
@@ -168,7 +173,7 @@ const NavBar = () => {
                             type="button"
                             onClick={() => setIsNavbarClose(!isNavbarClose)}
                         >
-                            <IoMdClose />
+                            <IoMdClose className="close-button" />
                         </button>
                     </div>
                     {navData.map((eachNavData) => {

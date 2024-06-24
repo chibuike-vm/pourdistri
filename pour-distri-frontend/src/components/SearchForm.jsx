@@ -2,69 +2,66 @@
 import { Form } from "react-router-dom";
 import styled from "styled-components";
 
-const Wrapper = styled.article`
-    text-align: center;
-    width: 90%;
+const Wrapper = styled.div`
+    width: 100%;
     margin: 0 auto;
 
-    h3 {
-        font-size: 1.3rem;
-        letter-spacing: 0.05rem;
-        line-height: 1.5rem;
-    }
-
     form {
-        width: 90%;
+        width: 100%;
         margin: 0 auto;
-        padding: 0.2rem;
+        padding: 0.5rem 0;
     }
 
     .input-div {
         display: flex;
         justify-content: center;
-        width: 90%;
+        width: 100%;
         margin: 0 auto;
         font-size: 1rem;
-        margin-bottom: 2rem;
+        margin-bottom: 0.5rem;
+        padding: 0.3rem 0.5rem;
     }
 
     input[type="search"] {
-        width: 60%;
-        padding: 0.1rem;
+        width: 65%;
+        padding: 0.3rem 0.4rem;
         border-top-left-radius: 7px;
         border-bottom-left-radius: 7px;
-        box-shadow: 0 0 0.5rem#d1d5db;
+        box-shadow: 0 0 0.2rem#d1d5db;
     }
 
     input[type="submit"] {
-        width: 30%;
-        background-color: #1f2937;
+        width: 35%;
+        background-color: #9f1239;
         color: #f9fafb;
-        padding: 0.1rem;
+        padding: 0.3rem 0.4rem;
         border-top-right-radius: 7px;
         border-bottom-right-radius: 7px;
-        box-shadow: 0 0 0.5rem#d1d5db;
+        box-shadow: 0 0 0.2rem#d1d5db;
     }
 
-    @media only screen and (width > 280px) {
+    @media only screen and (width >= 640px) {
         .input-div {
-            font-size: 1.2rem;
+            width: 80%;
+        }
+    }
+
+    @media only screen and (width >= 850px) {
+        .input-div {
+            width: 60%;
         }
     }
 `;
 
-const SearchForm = ({ searchItem }) => {
+const SearchForm = () => {
     return (
         <Wrapper>
             <Form className="form">
-                <h3>
-                    Kindly use the search box to explore our cocktail inventory.
-                </h3>
                 <div className="input-div">
                     <input
                         type="search"
                         name="search"
-                        defaultValue={searchItem}
+                        placeholder="search our cocktail"
                     />
                     <input type="submit" value="Search" />
                 </div>

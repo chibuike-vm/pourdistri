@@ -1,6 +1,5 @@
 import { useLoaderData } from "react-router-dom";
 import axios from "axios";
-import SearchForm from "../components/SearchForm";
 import CocktailLists from "../components/CocktailLists";
 import { useQuery } from "@tanstack/react-query";
 import Home from "../components/Home";
@@ -38,7 +37,6 @@ const Landing = () => {
     return (
         <section>
             <Home />
-            <SearchForm searchItem={searchItem} />
             <CocktailLists drinks={drinks} />
         </section>
     );

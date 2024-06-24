@@ -4,18 +4,17 @@ import styled from "styled-components";
 import deliveryTruckSvg from "../assets/images/delivery-truck.svg";
 
 const Wrapper = styled.article`
-    margin-top: 3.5rem;
+    margin-top: 2rem;
+    padding: 1rem 0.5rem;
 
     .form {
-        width: 90%;
+        width: 100%;
         margin: 0 auto;
-        margin-top: 2rem;
-        padding: 0.2rem;
+        margin-top: 1rem;
     }
 
     label,
     input {
-        font-size: 1rem;
         width: 100%;
         text-transform: capitalize;
         border-radius: 5px;
@@ -26,16 +25,18 @@ const Wrapper = styled.article`
     }
 
     label {
+        font-size: 1.05rem;
         display: block;
         margin-top: 1.5rem;
         margin-bottom: 0.2rem;
-        font-weight: 700;
+        font-weight: 600;
     }
 
     legend {
-        font-size: 1.3rem;
+        font-size: 1.1rem;
         text-transform: capitalize;
         font-weight: 600;
+        color: #9f1239;
     }
 
     fieldset:nth-of-type(1) {
@@ -56,63 +57,57 @@ const Wrapper = styled.article`
         background-color: #1f2937;
         color: #f9fafb;
         padding: 0.25rem;
-        border-radius: 10px;
+        border-radius: 7px;
+        font-size: 1.05rem;
     }
 
     input {
         margin-bottom: 1rem;
         background-color: #fff1f2;
         box-shadow: 0 0 1rem #d1d5db;
-        padding: 0.1rem 0.4rem;
+        padding: 0.2rem;
+        font-size: 1rem;
+    }
+
+    .spec-label {
+        text-transform: none;
     }
 
     h1 {
-        font-size: 1.35rem;
+        margin-top: 1rem;
+        font-size: 1.25rem;
+        margin-bottom: 0.4rem;
     }
 
     p {
-        line-height: 1.5rem;
-        letter-spacing: 0.05rem;
-        font-size: 1.05rem;
+        line-height: 1.2rem;
+        margin-top: 0;
     }
 
     img {
         display: block;
         margin: 0 auto;
-        height: 15rem;
-        width: 80%;
+        height: auto;
+        width: 100%;
     }
 
     @media only screen and (width >= 768px) {
-        img {
-            height: 17rem;
-            width: 100%;
-        }
-
         .formAndSvgContainer {
             display: flex;
             align-items: center;
         }
 
         section article {
-            width: 60%;
+            width: 50%;
         }
 
         section article:nth-of-type(1) {
-            width: 40%;
+            width: 50%;
         }
     }
 
     @media only screen and (width >= 912px) {
-        margin-top: 6rem;
-
-        .form {
-            width: 80%;
-        }
-
-        img {
-            width: 50%;
-        }
+        margin-top: 2.8rem;
     }
 `;
 
@@ -120,7 +115,7 @@ const ApplicationForm = ({ state }) => {
     return (
         <Wrapper>
             <Form method="POST" className="form">
-                <h1>Apply to Become a Distributor</h1>
+                <h1>Become a Distributor</h1>
                 <p>
                     As a distributor with PourDistri, you&apos;ll gain access to
                     a wide range of premium cocktails crafted by top-tier
@@ -186,8 +181,11 @@ const ApplicationForm = ({ state }) => {
                             />
                             <br />
 
-                            <label htmlFor="country-of-origin">
-                                country of origin
+                            <label
+                                htmlFor="country-of-origin"
+                                className="spec-label"
+                            >
+                                Country of Origin
                             </label>
                             <input
                                 type="text"
@@ -199,8 +197,11 @@ const ApplicationForm = ({ state }) => {
                         </fieldset>
                         <fieldset>
                             <legend>business information</legend>
-                            <label htmlFor="years-in-business">
-                                Years In Business
+                            <label
+                                htmlFor="years-in-business"
+                                className="spec-label"
+                            >
+                                Years in Business
                             </label>
                             <input
                                 type="number"

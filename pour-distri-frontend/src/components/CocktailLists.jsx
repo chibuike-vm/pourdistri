@@ -4,73 +4,78 @@ import { Link, Navigate, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
 const Wrapper = styled.section`
-    display: flex;
-    flex-direction: column;
-    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    width: 100%;
     margin: 0 auto;
-    gap: 2rem;
-    padding: 2rem;
+    gap: 0.5rem;
+    padding: 1rem 0.5rem;
+    grid-row-gap: 1rem;
+    grid-column-gap: 0.7rem;
 
     article {
-        box-shadow: 0 0.1rem 1rem #d1d5db;
-        display: flex;
-        flex-direction: column;
+        grid-column-start: span 6;
+        background-color: #1f2937;
+        box-shadow: 0 0 5px;
+        color: white;
+        border-radius: 5px;
+    }
+
+    img {
         width: 100%;
+        height: 50%;
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px;
     }
 
     .cocktail-description {
-        padding-left: 2rem;
-        background-color: #1f2937;
-        color: #f9fafb;
+        padding: 0.5rem;
+        padding-bottom: 1rem;
     }
 
-    .cocktail-description h2 {
-        font-size: 1.3rem;
+    h2 {
+        font-size: 1.1rem;
+        text-align: center;
+        margin-top: 0;
     }
 
-    .cocktail-image-div img {
-        width: 100%;
+    h3 {
+        font-size: 1rem;
     }
 
-    article div button {
-        margin-bottom: 2rem;
-        font-size: 1.2rem;
-        background-color: #be123c;
-        color: #fff1f2;
-        padding: 0.3rem 0.5rem;
+    button {
+        background-color: #9f1239;
+        border-radius: 0.4rem;
+        color: white;
+        padding: 0.25rem 0.5rem;
     }
 
     @media only screen and (width >= 768px) {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-
         article {
-            width: 45%;
-        }
-
-        .last-cocktail-container {
-            margin-right: auto;
-            margin-left: 0.35rem;
+            grid-column-start: span 4;
         }
     }
 
     @media only screen and (width >= 850px) {
         article {
-            width: 30%;
+            grid-column-start: span 3;
         }
     }
 `;
 
 const ErrorWrapper = styled.div`
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
-    text-align: center;
+    padding: 0.5rem;
+
+    h3 {
+        font-size: 1rem;
+    }
 
     span {
-        font-size: 1.2rem;
+        font-size: 1rem;
         text-transform: capitalize;
-        color: #6c63ff;
+        color: #9f1239;
     }
 `;
 
@@ -88,9 +93,8 @@ const CocktailLists = ({ drinks }) => {
         return (
             <ErrorWrapper>
                 <h3>
-                    Sorry, the search query did not match any cocktail in store.
-                    You will be taken back to the <span> home page</span> in 7
-                    seconds.
+                    Sorry, your search query did not match any cocktail in
+                    store.
                 </h3>
                 {time === 7 ? <Navigate to="/" /> || navigate(-1) : ""}
             </ErrorWrapper>
@@ -121,7 +125,7 @@ const CocktailLists = ({ drinks }) => {
                             <img
                                 src={strDrinkThumb}
                                 alt={strDrink}
-                                height={300}
+                                height={400}
                                 width={400}
                             />
                         </div>

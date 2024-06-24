@@ -24,7 +24,7 @@ const Wrapper = styled.section`
     /* =========== */
 
     .main {
-        max-width: 1500px;
+        max-width: 1200px;
         align-self: center;
     }
 
