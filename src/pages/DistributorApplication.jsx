@@ -8,7 +8,7 @@ export const action = async ({ request }) => {
     const applicantsData = Object.fromEntries(formDataInstance);
     try {
         const response = await axios.post(
-            "https://pour-distri.onrender.com/distributors/applicants",
+            "https://pourdistri.onrender.com/distributors/applicants",
             applicantsData
         );
         toast.success(
